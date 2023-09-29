@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import Searchbar from '@/components/Searchbar'
 import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar/User'
+import Navbar from '@/components/Navbar/Seller'
 import Product from '@/components/Product'
 
 export default function Home() {
