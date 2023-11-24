@@ -3,7 +3,7 @@ import Image from 'next/image'
 import {AiFillEdit,AiFillPhone,AiOutlineShoppingCart} from 'react-icons/ai'
 import { IProduct } from '@/type'
 const Product_Card: FunctionComponent<{product:IProduct}> = ({product:{id,imageSrc,productName,description,price,prevPrice,discount,manuDate,expDate,quality,unitsAvailable,supplierContact}}) => {
-const [user,setUser]=useState('admin')
+const [user,setUser]=useState('customer')
 
 const renderSellerOrAdminView=()=>(
         <div className="flex flex-col justify-center items-center   bg-blue-800 rounded-2xl p-2 " key={id}>
@@ -47,7 +47,7 @@ const renderCustomerView=()=>(
     <div className='bg-blue-900 px-2  text-yellow-300 absolute -mt-72 ml-56 rounded-lg'>
       Sold
     </div>
-    <Image className=' rounded-none' src="/Sample_Pic.png" alt="product-icon" height={200} width={270}/> 
+    <Image className=' rounded-none p-4' src="/Sample_Pic.png" alt="product-icon" height={200} width={270}/> 
     
     
     <div className='flex flex-col   text-center text-white rounded-b-2xl bg-slate-400'>
@@ -74,8 +74,7 @@ const renderCustomerView=()=>(
   
   return (
     <>
-    {user === 'seller' || user === 'admin' ? renderSellerOrAdminView() : renderCustomerView()}
-        
+    {user === 'seller' || user === 'admin' ? renderSellerOrAdminView() : renderCustomerView()}    
     </>
       
   )

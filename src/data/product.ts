@@ -6,7 +6,7 @@ export const products: IProduct[]=[
     imageSrc:"/ProductImage/Sample_Pic.png",
     productName: 'Sample Product 1',
     description: 'This is a sample product decription',
-    price: 69.96,
+    price: 696.96,
     prevPrice: 10.00,
     discount:0.00,
     manuDate: '00/00/0000',
